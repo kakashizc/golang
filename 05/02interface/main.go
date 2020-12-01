@@ -37,5 +37,5 @@ func main() {
 	a.run(11)
 	// a = c1
 	// fmt.Println(a)
-	// a.eat("大黄送")
+	// a.eat("大黄送1")
 }
