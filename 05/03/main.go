@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+//指针接口
+
 //Mover is a type
 type Mover interface {
 	move()
