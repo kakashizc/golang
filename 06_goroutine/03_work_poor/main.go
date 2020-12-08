@@ -11,7 +11,7 @@ var wg sync.WaitGroup
 //这里 jobs 单向通道只能取值
 func worker(id int, jobs <-chan int, results chan<- int) {
 	defer wg.Done()
-	for j := range jobs {
+	for j := range jobs { //这里的jobs之所以不会报错nil , 是因为main中for循环5次给jobs赋值后 才会进入worker goroutine协程
 		fmt.Printf("worker:%d start job:%d   start...........\n", id, j)
 		time.Sleep(time.Second * 10)
 		fmt.Printf("worker:%d end job:%d\n", id, j)
